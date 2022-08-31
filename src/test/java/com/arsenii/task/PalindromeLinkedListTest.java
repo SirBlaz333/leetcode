@@ -6,15 +6,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PalindromeLinkedListTest {
-    private PalindromeLinkedList.ListNode head;
+    private ListNode head;
     private PalindromeLinkedList palindromeLinkedList;
 
     @BeforeEach
     public void setUp(){
-        PalindromeLinkedList.ListNode fourth = new PalindromeLinkedList.ListNode(1);
-        PalindromeLinkedList.ListNode third = new PalindromeLinkedList.ListNode(2, fourth);
-        PalindromeLinkedList.ListNode second = new PalindromeLinkedList.ListNode(2, third);
-        head = new PalindromeLinkedList.ListNode(1, second);
+        ListNode fourth = new ListNode(1);
+        ListNode third = new ListNode(2, fourth);
+        ListNode second = new ListNode(2, third);
+        head = new ListNode(1, second);
         palindromeLinkedList = new PalindromeLinkedList();
     }
 
@@ -25,7 +25,7 @@ class PalindromeLinkedListTest {
 
     @Test
     public void testNonPalindrome(){
-        head = new PalindromeLinkedList.ListNode(5, head);
+        head = new ListNode(5, head);
         assertFalse(palindromeLinkedList.isPalindrome(head));
     }
 
